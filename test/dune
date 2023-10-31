@@ -29,9 +29,9 @@
 
 
 (rule
- (target google_include)
- (action (with-stdout-to %{target}
-          (system "pkg-config protobuf --variable=includedir"))))
+ (targets google_include)
+ (action (with-stdout-to %{targets}
+          (run conf-protobuf -variable=include-path))))
 
 (rule
  (targets

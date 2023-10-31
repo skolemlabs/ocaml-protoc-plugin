@@ -6,7 +6,7 @@
 (rule
  (targets google_include)
  (action (with-stdout-to %{targets}
-          (system "pkg-config protobuf --variable=includedir"))))
+          (run conf-protobuf -variable=include-path))))
 
 (rule
  (targets echo.ml)
