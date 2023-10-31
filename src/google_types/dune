@@ -8,7 +8,7 @@
 (rule
  (targets google_include)
  (action (with-stdout-to %{targets}
-          (run pkg-config protobuf --variable=includedir))))
+          (run conf-protobuf -variable=include-path))))
 
 (rule
  (targets any.ml api.ml descriptor.ml duration.ml empty.ml field_mask.ml

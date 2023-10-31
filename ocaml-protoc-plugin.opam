@@ -13,7 +13,7 @@ build: [
 ]
 
 depends: [
-  "conf-protoc" {>= "1.0.0"}
+  "conf-protobuf" {>= "1.0.0"}
   "dune" {>= "3.2"}
   "ocaml" {>= "4.08.0"}
   "ppx_expect" {with-test}
